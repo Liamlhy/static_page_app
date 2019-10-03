@@ -23,4 +23,10 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "About | #{@base_title}"
   end
+
+  test "should go to dynamic page" do
+    get static_pages_roll_url
+    assert_response :success
+    assert_select "title", "Roll | #{@base_title}"
+  end
 end
