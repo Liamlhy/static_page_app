@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/roll', to: 'static_pages#roll'
   get '/home', to: 'static_pages#home'
   get '/signup', to: 'users#new'
+  resources :users
 
   # get  'static_pages/home'
   # get  'static_pages/help'
